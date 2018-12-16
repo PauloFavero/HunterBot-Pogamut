@@ -44,9 +44,9 @@ class AttackState extends UT2004BotModuleController<UT2004Bot> implements Hunter
     public AttackState() {
         transitions = new Transition[4];
         transitions[3] = new TransitionToSearch();
-        transitions[0] = new TransitionToPursue();
+        transitions[2] = new TransitionToPursue();
         transitions[1] = new TransitionToHurted();
-        transitions[2] = new TransitionToAttack();
+        transitions[0] = new TransitionToAttack();
     }
 
     @Override

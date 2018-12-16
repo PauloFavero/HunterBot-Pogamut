@@ -39,7 +39,7 @@ public class SwitchToBestWeaponState extends UT2004BotModuleController<UT2004Bot
     
     @Override
     public void execute(HunterBot Bot) {
-        Bot.enemy = Bot.getPlayers().getNearestVisiblePlayer(Bot.getPlayers().getVisibleEnemies().values());
+       /* Bot.enemy = Bot.getPlayers().getNearestVisiblePlayer(Bot.getPlayers().getVisibleEnemies().values());
         if(Bot.enemy != null){
              distance = Bot.getInfo().getLocation().getDistance(Bot.enemy.getLocation());
             System.out.println("Distance " + distance);
@@ -61,7 +61,7 @@ public class SwitchToBestWeaponState extends UT2004BotModuleController<UT2004Bot
             System.out.println("Switch Meele weapon " + Bot.getWeaponry().getCurrentWeapon());
             }
         }
-              
+              */
     }
     
     public Transition[] getTransitions(){

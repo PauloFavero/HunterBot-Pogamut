@@ -29,7 +29,7 @@ public class TransitionToHurted extends UT2004BotModuleController<UT2004Bot> imp
     @Override
     public HunterState transition(HunterBot Bot) {
 
-        if(Bot.shouldCollectHealth && Bot.getInfo().getHealth() < Bot.healthLevel){
+        if(Bot.shouldCollectHealth && Bot.getInfo().getHealth() < 100){
             return new HurtedState();
         }
         else return null;

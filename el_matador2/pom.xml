@@ -7,6 +7,14 @@
 		<artifactId>pogamut-ut2004-bot-pom</artifactId>
 		<version>3.7.0</version>
 	</parent>
+    <dependencies>
+        <dependency>
+            <groupId>com.opencsv</groupId>
+            <artifactId>opencsv</artifactId>
+            <version>3.7</version>
+        </dependency>
+    </dependencies>
+
 
 	<groupId>com.mycompany</groupId>
 	<artifactId>el_matador2</artifactId>

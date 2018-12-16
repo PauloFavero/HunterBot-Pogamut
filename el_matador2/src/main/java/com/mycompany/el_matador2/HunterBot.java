@@ -6,6 +6,11 @@ import java.util.List;
 import java.util.Set;
 import java.util.logging.Level;
 
+import com.opencsv.CSVWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
+
 import cz.cuni.amis.introspection.java.JProp;
 import cz.cuni.amis.pogamut.base.agent.navigation.IPathExecutorState;
 import cz.cuni.amis.pogamut.base.communication.worldview.listener.annotation.EventListener;
@@ -133,6 +138,8 @@ public class HunterBot extends UT2004BotModuleController<UT2004Bot>{
      */
     protected TabooSet<Item> tabooItems = null;
 
+    CSVWriter csvWriter;
+    FileWriter mFileWriter;
     /**
      * Bot's preparation - called before the bot is connected to GB2004 and
      * launched into UT2004.
@@ -171,8 +178,37 @@ public class HunterBot extends UT2004BotModuleController<UT2004Bot>{
         weaponPrefs.addGeneralPref(UT2004ItemType.FLAK_CANNON, true);        
         weaponPrefs.addGeneralPref(UT2004ItemType.ROCKET_LAUNCHER, true);
         weaponPrefs.addGeneralPref(UT2004ItemType.LINK_GUN, true);
-        weaponPrefs.addGeneralPref(UT2004ItemType.ASSAULT_RIFLE, true);        
+        //weaponPrefs.addGeneralPref(UT2004ItemType.ASSAULT_RIFLE, true);
         weaponPrefs.addGeneralPref(UT2004ItemType.BIO_RIFLE, true);
+/*
+        // First range class is defined from 0 to 80 ut units (1 ut unit ~ 1 cm)
+        weaponPrefs.newPrefsRange(80)
+                .add(UT2004ItemType.SHIELD_GUN, true);
+        // Only one weapon is added to this close combat range and it is SHIELD GUN
+
+        // Second range class is from 80 to 1000 ut units (its always from the previous class to the maximum
+        // distance of actual class
+        weaponPrefs.newPrefsRange(1000)
+                .add(UT2004ItemType.FLAK_CANNON, true)
+                .add(UT2004ItemType.MINIGUN, true)
+                .add(UT2004ItemType.LINK_GUN, false);
+        //.add(UT2004ItemType.ASSAULT_RIFLE, true);
+        // More weapons are in this class with FLAK CANNON having the top priority
+
+        // Third range class is from 1000 to 4000 ut units - that's quite far actually
+        weaponPrefs.newPrefsRange(4000)
+                .add(UT2004ItemType.SHOCK_RIFLE, true)
+                .add(UT2004ItemType.MINIGUN, false);
+        // Two weapons here with SHOCK RIFLE being the top
+
+        // The last range class is from 4000 to 100000 ut units. In practise 100000 is
+        // the same as infinity as there is no map in UT that big
+        weaponPrefs.newPrefsRange(100000)
+                .add(UT2004ItemType.LIGHTNING_GUN, true)
+                .add(UT2004ItemType.SHOCK_RIFLE, true);
+        // Only two weapons here, both good at sniping
+
+        */
     }
 
     /**
@@ -199,8 +235,79 @@ public class HunterBot extends UT2004BotModuleController<UT2004Bot>{
     }
     int x=1;
     @EventListener(eventClass=PlayerDamaged.class)
-    public void playerDamaged(PlayerDamaged event) {
+    public void playerDamaged(PlayerDamaged event) throws IOException {
     	log.info("I have just hurt other bot for: " + event.getDamageType() + "[" + event.getDamage() + "]");
+
+    	if(this.enemy != null){
+        String distance = Double.toString(this.getInfo().getLocation().getDistance(this.enemy.getLocation()));
+        String damage = Integer.toString(event.getDamage());
+        String weaponName =  this.getWeaponry().getCurrentWeapon().getType().getName();
+        String rotation = Double.toString(this.getInfo().getRotation().getYaw()+ this.enemy.getRotation().getYaw());
+        String speed = Double.toString(this.enemy.getVelocity().getX());
+            String str = weaponName;
+            if ("XWeapons.AssaultRiflePickup".equals(str)) {
+                mFileWriter = new FileWriter("AssaultRiflePickup.csv", true);
+                csvWriter = new CSVWriter(mFileWriter);
+                csvWriter.writeNext(new String[]{distance, rotation, speed, damage,weaponName});
+                csvWriter.close();
+            }
+            else if ("XWeapons.FlakCannonPickup".equals(str)) {
+                mFileWriter = new FileWriter("FlakCannonPickup.csv", true);
+                csvWriter = new CSVWriter(mFileWriter);
+                csvWriter.writeNext(new String[]{distance, rotation, speed, damage,weaponName});
+                csvWriter.close();
+            }
+            else if ("XWeapons.LinkGunPickup".equals(str)) {
+                mFileWriter = new FileWriter("LinkGunPickup.csv", true);
+                csvWriter = new CSVWriter(mFileWriter);
+                csvWriter.writeNext(new String[]{distance, rotation, speed, damage,weaponName});
+                csvWriter.close();
+            }
+            else if ("XWeapons.RocketLauncherPickup".equals(str)) {
+                mFileWriter = new FileWriter("RocketLauncherPickup.csv", true);
+                csvWriter = new CSVWriter(mFileWriter);
+                csvWriter.writeNext(new String[]{distance, rotation, speed, damage,weaponName});
+                csvWriter.close();
+            }
+            else if ("XWeapons.ShockRiflePickup".equals(str)) {
+                mFileWriter = new FileWriter("ShockRiflePickup.csv", true);
+                csvWriter = new CSVWriter(mFileWriter);
+                csvWriter.writeNext(new String[]{distance, rotation, speed, damage,weaponName});
+                csvWriter.close();
+            }
+            else if ("XWeapons.RedeemerPickup".equals(str)) {
+                mFileWriter = new FileWriter("RedeemerPickup.csv", true);
+                csvWriter = new CSVWriter(mFileWriter);
+                csvWriter.writeNext(new String[]{distance, rotation, speed, damage,weaponName});
+                csvWriter.close();
+            }
+            else if ("XWeapons.SniperRiflePickup".equals(str)) {
+                mFileWriter = new FileWriter("SniperRiflePickup.csv", true);
+                csvWriter = new CSVWriter(mFileWriter);
+                csvWriter.writeNext(new String[]{distance, rotation, speed, damage,weaponName});
+                csvWriter.close();
+            }
+            else if ("XWeapons.BioRiflePickup".equals(str)) {
+                mFileWriter = new FileWriter("BioRiflePickup.csv", true);
+                csvWriter = new CSVWriter(mFileWriter);
+                csvWriter.writeNext(new String[]{distance, rotation, speed, damage,weaponName});
+                csvWriter.close();
+            }
+            else if ("XWeapons.MinigunPickup".equals(str)) {
+                mFileWriter = new FileWriter("MinigunPickup.csv", true);
+                csvWriter = new CSVWriter(mFileWriter);
+                csvWriter.writeNext(new String[]{distance, rotation, speed, damage,weaponName});
+                csvWriter.close();
+            }
+            else {
+                mFileWriter = new FileWriter("UnknowGun.csv", true);
+                csvWriter = new CSVWriter(mFileWriter);
+                csvWriter.writeNext(new String[]{distance, rotation, speed, damage,weaponName});
+                csvWriter.close();
+            }
+
+
+        }
     }
     
     @EventListener(eventClass=BotDamaged.class)
@@ -208,8 +315,10 @@ public class HunterBot extends UT2004BotModuleController<UT2004Bot>{
     	log.info("I have just been hurt by other bot for: " + event.getDamageType() + "[" + event.getDamage() + "]");
     }
     
-        public HunterBot(){
+        public HunterBot() {
          stateMachine= new StateMachine();
+
+
     }
 
     /**
@@ -245,7 +354,7 @@ public class HunterBot extends UT2004BotModuleController<UT2004Bot>{
     public static void main(String args[]) throws PogamutException {
         // starts 3 Hunters at once
         // note that this is the most easy way to get a bunch of (the same) bots running at the same time        
-    	new UT2004BotRunner(HunterBot.class, "Hunter").setMain(true).setLogLevel(Level.INFO).startAgents(1);
+    	new UT2004BotRunner(HunterBot.class, "Hunter").setMain(true).setLogLevel(Level.INFO).startAgents(10);
     }  
 }
 
