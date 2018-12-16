@@ -86,16 +86,15 @@ public void execute(HunterBot Bot) {
 
 ### Diagramme de classes du bot
 
+Nous nous asservissons du patron de conception *[State](https://sourcemaking.com/design_patterns/state)* et en plus d'une interface pour gerer les transitions. 
+
 La classe java *StateMachine* contient tous les états et transitions. Tous les états héritent de l'interface *HunterState*, qui possède une seule méthode *execute()*. Cette méthode correspond au comportement du bot pour une telle situation.
-Avant tout changement d'état, toutes les transitions sont vérifiées. Les états ont des transitions. Ces transactions héritent de l'interface "transitions" d'une seule méthode, comme pour les états.
 
 Chaque état a ses transitions de sortie possibles et chaque classe de transition vérifie si sa condition est satisfaite et si elle est vraie, elle renvoie à l'état suivant.
 
-L'architecture du projet est représentée dans le diagramme UML de la figure
+L'image ci-dessous exemplifique notre patron de conception que fait notre bot tourner.
 
 <img src="https://github.com/PauloFavero/HunterBot-Pogamut/blob/master/Bot_UML.png" width="400" height="400" />
-
-
 
 ## Deployment
 
