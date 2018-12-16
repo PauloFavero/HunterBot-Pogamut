@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ad77b3a-8d17-4a2f-9d74-169c994a0089" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../NeuralNetworks BestWeapon/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NeuralNetworks BestWeapon/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/el_matador2/AttackState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/el_matador2/AttackState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssaultRiflePickup.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AssaultRiflePickup.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BioRiflePickup.csv" beforeDir="false" afterPath="$PROJECT_DIR$/BioRiflePickup.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FlakCannonPickup.csv" beforeDir="false" afterPath="$PROJECT_DIR$/FlakCannonPickup.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MinigunPickup.csv" beforeDir="false" afterPath="$PROJECT_DIR$/MinigunPickup.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RocketLauncherPickup.csv" beforeDir="false" afterPath="$PROJECT_DIR$/RocketLauncherPickup.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShockRiflePickup.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ShockRiflePickup.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SniperRiflePickup.csv" beforeDir="false" afterPath="$PROJECT_DIR$/SniperRiflePickup.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/el_matador2/HunterBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/el_matador2/HunterBot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/el_matador2/SwitchToBestWeaponState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/el_matador2/SwitchToBestWeaponState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/el_matador2/TransitionToHurted.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/el_matador2/TransitionToHurted.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,11 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/mycompany/el_matador2/HunterBot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2072">
-              <caret line="298" column="95" selection-start-line="298" selection-start-column="95" selection-end-line="298" selection-end-column="95" />
+            <state relative-caret-position="2012">
+              <caret line="356" column="106" selection-start-line="356" selection-start-column="106" selection-end-line="356" selection-end-column="106" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#14175#14176#0" expanded="true" />
@@ -33,12 +34,24 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LinkGunPickup.csv">
+          <provider editor-type-id="csv-table-editor">
+            <state showInfoPanel="true" rowLines="3" />
+          </provider>
+          <provider selected="true" editor-type-id="csv-text-editor">
+            <state relative-caret-position="-189" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AssaultRiflePickup.csv">
           <provider editor-type-id="csv-table-editor">
             <state showInfoPanel="true" rowLines="3" />
           </provider>
           <provider selected="true" editor-type-id="csv-text-editor">
-            <state relative-caret-position="-12667" />
+            <state relative-caret-position="-73612">
+              <caret line="1246" selection-start-line="1246" selection-end-line="1246" />
+            </state>
           </provider>
         </entry>
       </file>
@@ -47,7 +60,9 @@
           <provider editor-type-id="csv-table-editor">
             <state showInfoPanel="true" rowLines="3" />
           </provider>
-          <provider selected="true" editor-type-id="csv-text-editor" />
+          <provider selected="true" editor-type-id="csv-text-editor">
+            <state relative-caret-position="-699" />
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -55,7 +70,19 @@
           <provider editor-type-id="csv-table-editor">
             <state showInfoPanel="true" rowLines="3" />
           </provider>
-          <provider selected="true" editor-type-id="csv-text-editor" />
+          <provider selected="true" editor-type-id="csv-text-editor">
+            <state relative-caret-position="-1668" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MinigunPickup.csv">
+          <provider editor-type-id="csv-table-editor">
+            <state showInfoPanel="true" rowLines="3" />
+          </provider>
+          <provider selected="true" editor-type-id="csv-text-editor">
+            <state relative-caret-position="-4490" />
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -63,7 +90,11 @@
           <provider editor-type-id="csv-table-editor">
             <state showInfoPanel="true" rowLines="3" />
           </provider>
-          <provider selected="true" editor-type-id="csv-text-editor" />
+          <provider selected="true" editor-type-id="csv-text-editor">
+            <state relative-caret-position="-19">
+              <caret line="28" column="79" lean-forward="true" selection-start-line="28" selection-start-column="79" selection-end-line="28" selection-end-column="79" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -71,7 +102,9 @@
           <provider editor-type-id="csv-table-editor">
             <state showInfoPanel="true" rowLines="3" />
           </provider>
-          <provider selected="true" editor-type-id="csv-text-editor" />
+          <provider selected="true" editor-type-id="csv-text-editor">
+            <state relative-caret-position="-1634" />
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -79,19 +112,8 @@
           <provider editor-type-id="csv-table-editor">
             <state showInfoPanel="true" rowLines="3" />
           </provider>
-          <provider selected="true" editor-type-id="csv-text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/cz/cuni/amis/pogamut/pogamut-ut2004/3.7.0/pogamut-ut2004-3.7.0.jar!/cz/cuni/amis/pogamut/ut2004/agent/module/sensomotoric/Weapon.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
-              <folding>
-                <element signature="e#1554#1555#0" expanded="true" />
-                <element signature="e#1592#1593#0" expanded="true" />
-              </folding>
-            </state>
+          <provider selected="true" editor-type-id="csv-text-editor">
+            <state relative-caret-position="-563" />
           </provider>
         </entry>
       </file>
@@ -100,19 +122,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
               <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/mycompany/el_matador2/SwitchToBestWeaponState.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="49" column="87" selection-start-line="49" selection-start-column="50" selection-end-line="49" selection-end-column="87" />
-              <folding>
-                <element signature="e#2794#2795#0" expanded="true" />
-                <element signature="e#2833#2834#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -207,7 +216,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544978490412" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544983275021" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -259,12 +268,12 @@
       <updated>1544925942442</updated>
       <workItem from="1544925953894" duration="984000" />
       <workItem from="1544967624131" duration="3068000" />
-      <workItem from="1544970805341" duration="7586000" />
+      <workItem from="1544970805341" duration="11216000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11638000" />
+    <option name="totallyTimeSpent" value="15268000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="776" extended-state="6" />
@@ -432,52 +441,82 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mycompany/el_matador2/HunterBot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2012">
+          <caret line="356" column="106" selection-start-line="356" selection-start-column="106" selection-end-line="356" selection-end-column="106" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#14175#14176#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/BioRiflePickup.csv">
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" rowLines="3" />
       </provider>
-      <provider selected="true" editor-type-id="csv-text-editor" />
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="-699" />
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FlakCannonPickup.csv">
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" rowLines="3" />
       </provider>
-      <provider selected="true" editor-type-id="csv-text-editor" />
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="-1668" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LinkGunPickup.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="-189" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MinigunPickup.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="-4490" />
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RocketLauncherPickup.csv">
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" rowLines="3" />
       </provider>
-      <provider selected="true" editor-type-id="csv-text-editor" />
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="-19">
+          <caret line="28" column="79" lean-forward="true" selection-start-line="28" selection-start-column="79" selection-end-line="28" selection-end-column="79" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ShockRiflePickup.csv">
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" rowLines="3" />
       </provider>
-      <provider selected="true" editor-type-id="csv-text-editor" />
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="-1634" />
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SniperRiflePickup.csv">
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" rowLines="3" />
       </provider>
-      <provider selected="true" editor-type-id="csv-text-editor" />
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="-563" />
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AssaultRiflePickup.csv">
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" rowLines="3" />
       </provider>
       <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="-12667" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mycompany/el_matador2/HunterBot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2072">
-          <caret line="298" column="95" selection-start-line="298" selection-start-column="95" selection-end-line="298" selection-end-column="95" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#14175#14176#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-73612">
+          <caret line="1246" selection-start-line="1246" selection-end-line="1246" />
         </state>
       </provider>
     </entry>
