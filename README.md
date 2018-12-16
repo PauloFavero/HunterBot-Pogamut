@@ -76,18 +76,26 @@ public void execute(HunterBot Bot) {
  Nous avons applique un algoritme d'apprentissage basé sur un article publié dans la revue ICANN. L'article c'est lle **Neural Networks Training for Weapon Selection in First-Person Shooter Games** écrit par **Stelios Petrakis and Anastasios Tefas**.
  
  Nous avons conçu un programme en python avec 9 réseaux de neuronnes que l'on pour but d'apprendre quelle est la meilleur arme à utiliser à une situation donné. Les données qu'iront alimenter nos réseaux sont obtenus dans le moment qui le bot inflinge dêgats à un ennemie. Chaque réseaux genère des fichiers avec les poids de la réseaux entrainé. 
+ La réseux est structuré comme la liste ci-dessous:
  
+ * **Couche d'Entre:** 3 Neuronnes (Distance, Rotation, Vitesse)
+ * **Couche Caché:** 50 Neuronnes activés par la fonction tangent hyperbolique.
+ * **Couche de Sortie** 1 Neuronne (Dêgats)
+
  Si nous pourrions avoir un mois de plus, nous aurions conçu une réseaux de neuronnes en java avec les poids obtenus par notre programme en python. La choix de l'arme était sense à être implementé dans la classe SwitchToBestWeaponState.
 
 ### Diagramme de classes du bot
 
+La classe java *StateMachine* contient tous les états et transitions. Tous les états héritent de l'interface *HunterState*, qui possède une seule méthode *execute()*. Cette méthode correspond au comportement du bot pour une telle situation.
+Avant tout changement d'état, toutes les transitions sont vérifiées. Les états ont des transitions. Ces transactions héritent de l'interface "transitions" d'une seule méthode, comme pour les états.
+
+Chaque état a ses transitions de sortie possibles et chaque classe de transition vérifie si sa condition est satisfaite et si elle est vraie, elle renvoie à l'état suivant.
+
+L'architecture du projet est représentée dans le diagramme UML de la figure
 
 <img src="https://github.com/PauloFavero/HunterBot-Pogamut/blob/master/Bot_UML.png" width="400" height="400" />
 
 
-```
-Give an example
-```
 
 ## Deployment
 
