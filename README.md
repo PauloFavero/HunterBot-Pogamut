@@ -40,7 +40,7 @@ Dans cette section, nous expliquerons comment a été le développement de notre
 
 L'automate à états qui nous avons developpé ce trouve ci-dessous.
 
-<img src="https://github.com/PauloFavero/Java-Projects/blob/master/Bot_States.png" width="400" height="400" />
+<img src="https://github.com/PauloFavero/HunterBot-Pogamut/blob/master/Bot_States.png width="400" height="400" />
 
 Chaque état possède ses respectives transitions de sortie organisé par ordre de priorité.
 
@@ -82,6 +82,9 @@ public void execute(HunterBot Bot) {
 ### Diagramme de classes du bot
 
 Explain what these tests test and why
+
+<img src="https://github.com/PauloFavero/HunterBot-Pogamut/blob/master/Bot_UML.png width="400" height="400" />
+
 
 ```
 Give an example
