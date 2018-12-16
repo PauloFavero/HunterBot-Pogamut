@@ -6,13 +6,15 @@ number_of_samples = 3000
 # TODO: Set a range of zero to one
 X = np.random.randn(number_of_samples, 3)
 y = np.random.randn(number_of_samples, 1)
-xPredicted = np.array(([4, 8]), dtype=float)
+pred = np.random.randn(10, 3)
+xPredicted = pred
 
 # scale units
 X = X / np.amax(X, axis=0)  # maximum of X array (distance, rotation and speed)
 y = y / np.amax(y, axis=0)  # max damage between 0 and 1
 xPredicted = xPredicted / np.amax(xPredicted, axis=0)
-
+print(X.shape)
+print(xPredicted)
 
 class Neural_Network(object):
     def __init__(self, in_layer_size, out_layer_size, hidden_layer_size):
@@ -27,6 +29,8 @@ class Neural_Network(object):
 
     def forward(self, X):
         # forward propagation through our network
+        print(X.shape)
+        print(self.W1.shape)
         self.z = np.dot(X, self.W1)  # dot product of X (input) and first set of 3x2 weights
         self.z2 = self.sigmoid(self.z)  # activation function
         self.z3 = np.dot(self.z2, self.W2)  # dot product of hidden layer (z2) and second set of 3x1 weights
