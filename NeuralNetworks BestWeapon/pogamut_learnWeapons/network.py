@@ -3,6 +3,7 @@ import numpy as np
 # Load the Pandas libraries with alias 'pd'
 import pandas as pd
 from sklearn.model_selection import train_test_split
+from sklearn import preprocessing
 
 # Read data from file 'filename.csv'
 # (in the same directory that your python process is based)
@@ -88,6 +89,32 @@ class Neural_Network(object):
         xFeatures = data.drop(['damage', 'weaponName'], axis=1)
         yOutput = data.drop(['distance',"rotation","speed",'weaponName'], axis=1)
         X_train, X_test, y_train, y_test = train_test_split(xFeatures, yOutput,test_size=0.2)
+
+       # X_train = np.array(X_train)
+       # X_test = np.array(X_test)
+       # y_train = np.array(y_train)
+       # y_test = np.array(y_test)
+
+        X_train = X_train.values #returns a numpy array
+        min_max_scaler = preprocessing.MinMaxScaler()
+        X_train = min_max_scaler.fit_transform(X_train)
+        X_train = pd.DataFrame(X_train)
+
+        X_test = X_test.values #returns a numpy array
+        min_max_scaler = preprocessing.MinMaxScaler()
+        X_test = min_max_scaler.fit_transform(X_test)
+        X_test = pd.DataFrame(X_test)
+
+        y_train = y_train.values #returns a numpy array
+        min_max_scaler = preprocessing.MinMaxScaler()
+        y_train = min_max_scaler.fit_transform(y_train)
+        y_train = pd.DataFrame(y_train)
+
+        y_test = y_test.values #returns a numpy array
+        min_max_scaler = preprocessing.MinMaxScaler()
+        y_test = min_max_scaler.fit_transform(y_test)
+        y_test = pd.DataFrame(y_test)
+
         #print(X_train[0].max())
         #print("\nX_train:\n")
         #print(X_train.head())

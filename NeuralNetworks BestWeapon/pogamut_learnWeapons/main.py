@@ -38,16 +38,16 @@ for i in range(len(networksList)):
     NN = networksList[i]
     X_train, X_test, y_train, y_test = NN.prepareData(pathList[i])
 
-    for j in range(10):  # trains the NN 1,000 times
+    for j in range(1000):  # trains the NN 1,000 times
         print("# " + str(j) + "\n")
         #print("Input (scaled): \n" + str(X_train))
         #print("Actual Output: \n" + str(y_train))
         #print("Predicted Output: \n" + str(NN.forward(X_train)))
         print("**************")
-        print(np.mean(np.square(y_train - NN.forward(X_train))))
-        print("Loss: \n" + str(np.mean(np.square(y_train - NN.forward(X_train)))))  # mean sum squared loss
+        print("Loss: " + str(np.mean(np.square(y_train - NN.forward(X_train)))))  # mean sum squared loss
         print("\n")
         NN.train(X_train, y_train)
 
     NN.saveWeights(nameList[i])
     NN.predict(X_test)
+    print("***********************************************************************************************")
