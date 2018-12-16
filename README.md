@@ -97,10 +97,6 @@ L'image ci-dessous exemplifique notre patron de conception que fait notre bot to
 
 <img src="https://github.com/PauloFavero/HunterBot-Pogamut/blob/master/Bot_UML.png" width="400" height="400" />
 
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
 ## Built With
 
 * [Maven](https://maven.apache.org/) - Dependency Management
@@ -112,9 +108,4 @@ Add additional notes about how to deploy this on a live system
 
 * **Paulo Henrique Favero Pereira**
 
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
 
