@@ -78,7 +78,7 @@ public void execute(HunterBot Bot) {
  Nous avons conçu un programme en python avec 9 réseaux de neuronnes qui ont pour but d'apprendre à choisir la meilleur arme à utiliser dans une situation donné. Les données qu'iront alimenter nos réseaux sont obtenus au moment où le bot inflinge  des dêgats à un ennemi. Chaque réseaux genère des fichiers avec le poids de la réseaux entrainé. 
  La réseux est structuré comme la liste ci-dessous:
  
- * **Couche d'Entre:** 3 Neuronnes (Distance, Rotation, Vitesse)
+ * **Couche d'Entre:** 3 Types de data (Distance, Rotation, Vitesse)
  * **Couche Caché:** 50 Neuronnes activés par la fonction tangent hyperbolique.
  * **Couche de Sortie** 1 Neuronne (Dêgats)
 
@@ -104,7 +104,7 @@ L'image ci-dessous exemplifique notre patron de conception que fait notre bot to
 
 ## Auteurs: 
 
-* **Helon Moreira**
+* **Helon Moreira Freitas**
 
 * **Paulo Henrique Favero Pereira**
 
