@@ -97,10 +97,10 @@ L'image ci-dessous exemplifique notre patron de conception que fait notre bot to
 
 <img src="https://github.com/PauloFavero/HunterBot-Pogamut/blob/master/Bot_UML.png" width="400" height="400" />
 
-## Built With
+## Conçu avec
 
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [Pogamut](http://pogamut.cuni.cz/main/tiki-index.php) - Java Middleware to control virtual agents
+* [Maven](https://maven.apache.org/) - Gestion des dépendances
+* [Pogamut](http://pogamut.cuni.cz/main/tiki-index.php) - Middleware Java pour controler des agents virtuels.
 
 ## Auteurs: 
 
